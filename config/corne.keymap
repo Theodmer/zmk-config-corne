@@ -25,23 +25,23 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | &mt LALT GUI | LWR | SPC |   | d tgbbENT | RSE  | RALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LSHFT &nkp A &kp S &nkp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &mt LALT LGUI &mo LEFT &kp SPACE   &kp RET &mo RIGHT &kp RALT
+   &kp TAB         &kp Q    &kp W         &kp E     &kp R       &kp T    &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSPC
+   &mt LSHFT CAPS  &nkp A   &kp S         &nkp D    &kp F       &kp G    &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+   &kp LCTRL       &kp Z    &kp X         &kp C     &kp V       &kp B    &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                            &mt LGUI &mo LEFT  &mt LALT SPACE   &kp RET  &mo RIGHT  &kp RALT
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | CTRL |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | &mt LALT GUI |     | SPC |   | ENT |     | RALT |
                         bindings = < 
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7    &kp N8 &kp N9        &kp N0        &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN  &kp UP &kp RIGHT     &kp K_VOL_UP  &trans
-   &kp LCTRL  &trans       &trans       &trans       &trans       &trans         &trans   &trans    &trans &kp K_PREV    &kp K_VOL_DN  &kp K_NEXT
-                                    &mt LALT LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &kp TAB     &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8  &kp N9        &kp N0        &kp DEL
+   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT     &kp C_VOL_UP  &trans
+   &kp LCTRL   &trans        &trans           &trans        &trans        &trans          &trans    &trans    &trans  &kp C_PREV    &kp C_VOL_DN  &kp C_NEXT
+                             &mt LALT LGUI    &trans        &kp SPACE     &kp RET         &trans    &kp RALT
                         >;
                 };
 
