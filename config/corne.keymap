@@ -10,23 +10,23 @@
 #include <behaviors/non_overlap.dtsi>
 
 #define DEFAULT 0
-#define NUM 1
-#define SYM 2
-#define CONTROL 3
-#define GRA 4
+#define GRA 1
+#define NUM 2
+#define SYM 3
+#define CONTROL 4
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         control_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };
 
 
-//=========================//=========================/ Version: 1.0 /=========================//=========================//
+//=========================//=========================/ Version: 1.1 /=========================//=========================//
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -37,6 +37,16 @@
    &kp TAB      &kp Q    &kp W     &kp E         &kp R       &kp T            &kp Y      &kp U      &kp I      &kp O    &kp P     &mt LGUI ESC
    &kp LSHFT    &nkp A   &kp S     &nkp D        &kp F       &kp G            &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp DQT
    &kp LCTRL    &kp Z    &kp X     &kp C         &kp V       &kp B            &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                                   &mt LALT DEL  &mo NUM     &kp SPACE        &kp BSPC   &mo SYM    &sk RALT
+                        >;
+                };
+                
+                qwerty_layer {
+                         bindings = <
+                         
+   &kp TAB      &kp B    &kp L     &kp D         &kp W       &kp Z            &kp MINUS  &kp F      &kp O     &kp U    &kp J     &mt LGUI ESC
+   &kp LSHFT    &nkp N   &kp R     &nkp T        &kp S       &kp G            &kp Y      &kp H      &kp A      &kp E    &kp I  &kp DQT
+   &kp LCTRL    &kp Q    &kp X     &kp M         &kp C       &kp V            &kp K      &kp P      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
                                    &mt LALT DEL  &mo NUM     &kp SPACE        &kp BSPC   &mo SYM    &sk RALT
                         >;
                 };
@@ -71,14 +81,5 @@
                         >;
                 };
 
-                qwerty_layer {
-                         bindings = <
-                         
-   &kp TAB      &kp B    &kp L     &kp D         &kp W       &kp Z            &kp MINUS  &kp F      &kp O     &kp U    &kp J     &mt LGUI ESC
-   &kp LSHFT    &nkp N   &kp R     &nkp T        &kp S       &kp G            &kp Y      &kp H      &kp A      &kp E    &kp I  &kp DQT
-   &kp LCTRL    &kp Q    &kp X     &kp M         &kp C       &kp V            &kp K      &kp P      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
-                                   &mt LALT DEL  &mo NUM     &kp SPACE        &kp BSPC   &mo SYM    &sk RALT
-                        >;
-                };
         };
 };
