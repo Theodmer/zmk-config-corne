@@ -25,7 +25,7 @@
     };
 };
 
-//=========================//=========================/ Version: 1.2 /=========================//=========================//
+//=========================//=========================/ Version: 1.3 /=========================//=========================//
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -43,10 +43,10 @@
                 qwerty_layer {
                          bindings = <
                          
-   &kp TAB      &kp B    &kp L     &kp D         &kp W       &kp Z            &kp SEMI   &kp F      &kp O     &kp U    &kp J     &mt LGUI ESC
-   &kp LSHFT    &nkp N   &kp R     &nkp T        &kp S       &kp G            &kp Y      &kp H      &kp A      &kp E    &kp I  &kp DQT
-   &kp LCTRL    &kp Q    &kp X     &kp M         &kp C       &kp V            &kp K      &kp P      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
-                                   &mt LALT DEL  &mo NUM     &kp SPACE        &kp BSPC   &mo SYM    &sk RALT
+   &kp TAB      &kp FSLH  &kp L     &kp D         &kp W     &kp COMMA        &kp DOT   &kp F      &kp O     &kp U    &kp SEMI  &mt LGUI ESC
+   &kp LSHFT    &nkp N    &kp R     &nkp T        &kp S     &kp G            &kp Y     &kp H      &kp A     &kp E    &kp I     &kp DQT
+   &kp LCTRL    &kp Q     &kp X     &kp M         &kp C     &kp V            &kp K     &kp P      &kp J     &kp Z    &kp B     &kp RET
+                                    &mt LALT DEL  &mo NUM   &kp SPACE        &kp BSPC  &mo SYM    &sk RALT
                         >;
                 };
 
