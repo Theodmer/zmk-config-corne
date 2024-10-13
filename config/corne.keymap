@@ -25,6 +25,17 @@
     };
 };
 
+
+/ {
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp BSPC>, <&kp LC(BSPC)>;
+        };
+    };
+
 //=========================//=========================/ Version: 1.4 /=========================//=========================//
 / {
         keymap {
@@ -33,10 +44,10 @@
                 default_layer {
                          bindings = <
                          
-   &kp TAB      &kp Q    &kp W     &kp E         &kp R       &kp T            &kp Y      &kp U      &kp I      &kp O    &kp P     &mt LGUI ESC
-   &kp LSHFT    &nkp A   &kp S     &nkp D        &kp F       &kp G            &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp DQT
-   &kp LCTRL    &kp Z    &kp X     &kp C         &kp V       &kp B            &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
-                                   &mt LALT DEL  &mo NUM     &kp SPACE        &kp BSPC   &mo SYM    &sk RALT
+   &kp TAB      &kp Q    &kp W     &kp E         &kp R       &kp T            &kp Y     &kp U      &kp I      &kp O    &kp P     &mt LGUI ESC
+   &kp LSHFT    &nkp A   &kp S     &nkp D        &kp F       &kp G            &kp H     &kp J      &kp K      &kp L    &kp SEMI  &kp DQT
+   &kp LCTRL    &kp Z    &kp X     &kp C         &kp V       &kp B            &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                                   &mt LALT DEL  &mo NUM     &kp SPACE        &td0      &mo SYM    &sk RALT
                         >;
                 };
                 
@@ -46,7 +57,7 @@
    &kp TAB      &kp FSLH  &kp L     &kp D         &kp W     &kp COMMA        &kp DOT   &kp F      &kp O     &kp U    &kp SEMI  &mt LGUI ESC
    &kp LSHFT    &nkp N    &kp R     &nkp T        &kp S     &kp G            &kp Y     &kp H      &kp A     &kp E    &kp I     &kp DQT
    &kp LCTRL    &kp Q     &kp X     &kp M         &kp C     &kp V            &kp K     &kp P      &kp B     &kp J    &kp Z     &kp RET
-                                    &mt LALT DEL  &mo NUM   &kp SPACE        &kp BSPC  &mo SYM    &sk RALT
+                                    &mt LALT DEL  &mo NUM   &kp SPACE        &td0      &mo SYM    &sk RALT
                         >;
                 };
 
