@@ -16,7 +16,7 @@
 #define CONTROL 4
 
 #define MO_TOG(layer) &mo_tog layer layer
-#define AA(keycode) &aa LA(keycode) keycode
+#define AA(keycode) &aa RA(keycode) keycode
 
 
 //=========================//=========================/ Version: 4.4 /=========================//=========================//
