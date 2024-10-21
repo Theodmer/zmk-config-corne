@@ -34,7 +34,7 @@
     tapping-term-ms = <240>;
 };
 
-//=========================//=========================/ Version: 3.0 /=========================//=========================//
+//=========================//=========================/ Version: 3.1 /=========================//=========================//
 / {
         behaviors {
                 mo_tog: behavior_mo_tog {
@@ -44,6 +44,13 @@
                         tapping-term-ms = <200>;
                         bindings = <&mo>, <&tog>;
                 };
+
+                tdq: tap_dance_quote {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp SQT>, <&kp DQT>;
+        };
         };
 
         keymap {
@@ -62,8 +69,8 @@
                 qwerty_layer {
                          bindings = <
                          
-   &kp TAB      &kp FSLH  &kp L     &kp D      &kp W      &kp COMMA        &kp DOT   &kp F     &kp O     &kp U    &kp SEMI  &mt LGUI ESC
-   &kp LSHFT    &nkp N    &kp R     &nkp T     &kp S      &kp G            &kp Y     &kp H     &kp A     &kp E    &kp I     &kp DQT
+   &kp TAB      &kp F20   &kp L     &kp D      &kp W      &ht DOT COMMA    &kp FSLH  &kp F     &kp O     &kp U    &kp SEMI  &mt LGUI ESC
+   &kp LSHFT    &nkp N    &kp R     &nkp T     &kp S      &kp G            &kp Y     &kp H     &kp A     &kp E    &kp I     &tdq
    &kp LCTRL    &kp Q     &kp X     &kp M      &kp C      &kp V            &kp K     &kp P     &kp B     &kp J    &kp Z     &kp RET
                                     &trans     &trans     &trans           &trans    &trans    &trans
                         >;
@@ -92,8 +99,8 @@
                 control_layer {
                         bindings = <
 
-   &none        &kp LC(LEFT)  &kp UP    &kp LC(RIGHT) &none     &bt BT_SEL 0         &none           &none       &kp C_VOL_UP  &none       &none    &tog GRA
-   &kp LSHFT    &kp LEFT      &kp DOWN  &kp RIGHT     &none     &bt BT_SEL 1         &bt BT_CLR_ALL  &kp C_PREV  &kp C_PP      &kp C_NEXT  &none    &none
+   &none        &kp LC(LEFT)  &kp UP    &kp LC(RIGHT) &none     &bt BT_SEL 0         &bt BT_CLR_ALL  &none       &kp C_VOL_UP  &none       &none    &tog GRA
+   &kp LSHFT    &kp LEFT      &kp DOWN  &kp RIGHT     &none     &bt BT_SEL 1         &none           &kp C_PREV  &kp C_PP      &kp C_NEXT  &none    &none
    &kp LCTRL    &none         &none     &none         &none     &bt BT_SEL 2         &bt BT_CLR      &none       &kp C_VOL_DN  &none       &none    &none
                                         &trans        &trans    &trans               &trans          &trans       &trans
                         >;
