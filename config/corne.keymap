@@ -50,7 +50,7 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&kp SQT>, <&kp DQT>;
-        };
+                };
         };
 
         keymap {
@@ -69,10 +69,10 @@
                 qwerty_layer {
                          bindings = <
                          
-   &kp TAB      &kp F20   &kp L     &kp D      &kp W      &ht DOT COMMA    &kp FSLH  &kp F     &kp O     &kp U    &kp SEMI  &mt LGUI ESC
-   &kp LSHFT    &nkp N    &kp R     &nkp T     &kp S      &kp G            &kp Y     &kp H     &kp A     &kp E    &kp I     &td0
-   &kp LCTRL    &kp Q     &kp X     &kp M      &kp C      &kp V            &kp K     &kp P     &kp B     &kp J    &kp Z     &kp RET
-                                    &trans     &trans     &trans           &trans    &trans    &trans
+   &kp TAB      &kp F20   &kp L     &kp D      &kp W      &ht_tp DOT COMMA     &kp FSLH  &kp F     &kp O     &kp U    &kp SEMI  &mt LGUI ESC
+   &kp LSHFT    &nkp N    &kp R     &nkp T     &kp S      &kp G                &kp Y     &kp H     &kp A     &kp E    &kp I     &td0
+   &kp LCTRL    &kp Q     &kp X     &kp M      &kp C      &kp V                &kp K     &kp P     &kp B     &kp J    &kp Z     &kp RET
+                                    &trans     &trans     &trans               &trans    &trans    &trans
                         >;
                 };
 
