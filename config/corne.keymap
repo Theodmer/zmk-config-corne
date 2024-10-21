@@ -18,6 +18,9 @@
 #define MO_TOG(layer) &mo_tog layer layer
 #define AA(keycode) &aa LA(keycode) keycode
 
+
+//=========================//=========================/ Version: 4.4 /=========================//=========================//
+
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -28,13 +31,11 @@
     };
 };
 
-
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <240>;
 };
 
-//=========================//=========================/ Version: 4.3 /=========================//=========================//
 / {
         behaviors {
 
@@ -50,7 +51,7 @@
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&kp LALT>, <&kp LGUI>;
+                        bindings = <&kp LALT>, <&kp LGUI>, <&kp LG(LALT)>;
                 };
 
                 tdcaps: tap_dance_shift_caps {
