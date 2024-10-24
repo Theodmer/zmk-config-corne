@@ -16,11 +16,12 @@
 #define CONTROL 4
 
 #define MO_TOG(layer) &mo_tog layer layer
-#define AA(keycode) &aa LA(keycode) keycode
+#define AA(keycode) &aa RA(keycode) keycode
 #define CTRL(keycode) &aa LGUI(keycode) LCTRL(keycode)
 
 
-//=========================//=========================/ Version: 4.5 /=========================//=========================//
+
+//=========================//=========================/ Version: 4.6 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -82,7 +83,7 @@
                 aa: auto_alt {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        tapping_term_ms = <335>;
+                        tapping_term_ms = <240>;
                         quick_tap_ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
