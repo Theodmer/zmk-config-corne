@@ -21,7 +21,7 @@
 
 
 
-//=========================//=========================/ Version: 4.8 /=========================//=========================//
+//=========================//=========================/ Version: 4.9 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -97,7 +97,7 @@
                         bindings = <&kp>, <&kp>;
                 };
 
-                bt_clr: bluetooth_clearer {
+                bt_clrr: bluetooth_clearer {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping_term_ms = <1000>;
@@ -175,7 +175,7 @@
                 control_layer {
                         bindings = <
 
-   &none      &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt         &bt_clr BT_CLR_ALL BT_CLR &none     &none       &vbup     &none       &to GRA
+   &none      &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt         &bt_clrr BT_CLR_ALL BT_CLR &none     &none       &vbup     &none       &to GRA
    &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none         &none                     &none     &kp C_PREV  &kp C_PP  &kp C_NEXT  &to 0
    &trans     &none         &none     CTRL(X)        CTRL(C)     CTRL(V)       &none                     &none     &none       &vbdn     &none       &mt RSFT RET
                                       &trans         &trans      &trans        &trans                    &trans    &trans
