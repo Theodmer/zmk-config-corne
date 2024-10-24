@@ -17,9 +17,10 @@
 
 #define MO_TOG(layer) &mo_tog layer layer
 #define AA(keycode) &aa LA(keycode) keycode
+#define CTRL(keycode) &aa LGUI(keycode) LCTRL(keycode)
 
 
-//=========================//=========================/ Version: 4.4 /=========================//=========================//
+//=========================//=========================/ Version: 4.5 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -94,6 +95,20 @@
                         bindings = <&kp BSPC>, <&kp DEL>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
+
+                vbup: vol_brghtnss_up {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp C_VOL_UP>, <&kp C_BRI_UP>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
+                
+                vbdn: vol_brghtnss_down {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp C_VOL_DN>, <&kp C_BRI_DN>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
         };
 
         keymap {
@@ -142,10 +157,10 @@
                 control_layer {
                         bindings = <
 
-   &none      &kp LC(LEFT)  &kp UP    &kp LC(RIGHT) &none     &bt BT_SEL 0         &bt BT_CLR_ALL  &none     &none       &kp C_VOL_UP  &none       &to GRA
-   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT     &none     &bt BT_SEL 1         &none           &none     &kp C_PREV  &kp C_PP      &kp C_NEXT  &to 0
-   &trans     &none         &none     &none         &none     &bt BT_SEL 2         &bt BT_CLR      &none     &none       &kp C_VOL_DN  &none       &trans
-                                      &trans        &trans    &trans               &trans          &trans    &trans
+   &none      &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &bt BT_SEL 0         &bt BT_CLR_ALL  &none     &none       &vbup     &none       &to GRA
+   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &bt BT_SEL 1         &none           &none     &kp C_PREV  &kp C_PP  &kp C_NEXT  &to 0
+   &trans     &CTRL(X)      &none     &CTRL(C)       &CTRL(V)    &bt BT_SEL 2         &bt BT_CLR      &none     &none       &vbdn     &none       &mt RSFT RET
+                                      &trans         &trans      &trans               &trans          &trans    &trans
                         >;
                 };
 
