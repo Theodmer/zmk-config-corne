@@ -17,7 +17,7 @@
 
 #define MO_TOG(layer) &mo_tog layer layer
 #define AA(keycode) &aa RA(keycode) keycode
-#define CTRL(keycode) &aa LGUI(keycode) LCTRL(keycode)
+#define CTRL(keycode) &aa LG(keycode) LC(keycode)
 
 
 
