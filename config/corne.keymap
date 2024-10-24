@@ -16,8 +16,8 @@
 #define CONTROL 4
 
 #define MO_TOG(layer) &mo_tog layer layer
-#define AA(keycode) &aa RA(keycode) keycode
-#define CTRL(keycode) &aa LG(keycode) LC(keycode)
+#define AA(keycode) &ht_tp RA(keycode) keycode
+#define CTRL(keycode) &ht_tp LG(keycode) LC(keycode)
 
 
 
@@ -83,14 +83,6 @@
                 ht_tp: behavior_tap_preferred {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        flavor = "tap-preferred";
-                        tapping-term-ms = <200>;
-                        bindings = <&kp>, <&kp>;
-                };
-
-                aa: auto_alt {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
                         tapping_term_ms = <240>;
                         quick_tap_ms = <0>;
                         flavor = "tap-preferred";
@@ -101,9 +93,8 @@
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping_term_ms = <1000>;
-                        quick_tap_ms = <0>;
                         flavor = "tap-preferred";
-                        bindings = <&bt>, <&bt>;
+                        bindings = <&bt BT_CLR_ALL>, <&bt BT_CLR>;
                 };
 
         //==================== MOD MORPH ====================//
@@ -175,10 +166,10 @@
                 control_layer {
                         bindings = <
 
-   &none      &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt         &bt_clrr BT_CLR_ALL BT_CLR &none     &none       &vbup     &none       &to GRA
-   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none         &none                     &none     &kp C_PREV  &kp C_PP  &kp C_NEXT  &to 0
-   &trans     &none         &none     CTRL(X)        CTRL(C)     CTRL(V)       &none                     &none     &none       &vbdn     &none       &mt RSFT RET
-                                      &trans         &trans      &trans        &trans                    &trans    &trans
+   &none      &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt         &bt_clrr   &none     &none       &vbup     &none       &to GRA
+   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none         &none      &none     &kp C_PREV  &kp C_PP  &kp C_NEXT  &to 0
+   &trans     &none         &none     CTRL(X)        CTRL(C)     CTRL(V)       &none      &none     &none       &vbdn     &none       &mt RSFT RET
+                                      &trans         &trans      &trans        &trans     &trans    &trans
                         >;
                 };
 
