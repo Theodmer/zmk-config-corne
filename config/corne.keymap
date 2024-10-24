@@ -21,7 +21,7 @@
 
 
 
-//=========================//=========================/ Version: 4.6 /=========================//=========================//
+//=========================//=========================/ Version: 4.7 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -63,6 +63,14 @@
                         bindings = <&kp LSHFT>, <&kp CAPS>;
                 };
                 
+
+                tdbt: tap_dance_bluetooth {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>;
+                };
+
         //==================== HOLD TAPS ====================//
                 mo_tog: behavior_mo_tog {
                         compatible = "zmk,behavior-hold-tap";
@@ -84,6 +92,15 @@
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping_term_ms = <240>;
+                        quick_tap_ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                };
+
+                bt_clr: bluetooth_clearer {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping_term_ms = <1000>;
                         quick_tap_ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
@@ -158,10 +175,10 @@
                 control_layer {
                         bindings = <
 
-   &none      &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &bt BT_SEL 0         &bt BT_CLR_ALL  &none     &none       &vbup     &none       &to GRA
-   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &bt BT_SEL 1         &none           &none     &kp C_PREV  &kp C_PP  &kp C_NEXT  &to 0
-   &trans     CTRL(X)       &none     CTRL(C)        CTRL(V)     &bt BT_SEL 2         &bt BT_CLR      &none     &none       &vbdn     &none       &mt RSFT RET
-                                      &trans         &trans      &trans               &trans          &trans    &trans
+   &none      &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt         &bt_clr BT_CLR_ALL BT_CLR  &none     &none       &vbup     &none       &to GRA
+   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none         &none                      &none     &kp C_PREV  &kp C_PP  &kp C_NEXT  &to 0
+   &trans     &none         &none     CTRL(X)        CTRL(C)     CTRL(V)       &none                      &none     &none       &vbdn     &none       &mt RSFT RET
+                                      &trans         &trans      &trans               &trans              &trans    &trans
                         >;
                 };
 
