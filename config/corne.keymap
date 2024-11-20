@@ -10,10 +10,11 @@
 #include <behaviors/non_overlap.dtsi>
 
 #define DEFAULT 0
-#define GRA 1
-#define NUM 2
-#define SYM 3
-#define CONTROL 4
+#define MAC 1
+#define GRA 2
+#define NUM 3
+#define SYM 4
+#define CONTROL 5
 
 #define MO_TOG(layer) &mo_tog layer layer
 #define AA(keycode) &ht_tp RA(keycode) keycode
@@ -21,14 +22,14 @@
 
 
 
-//=========================//=========================/ Version: 4.10 /=========================//=========================//
+//=========================//=========================/ Version: 5.0 /=========================//=========================//
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         control_layer {
-            if-layers = <2 3>;
-            then-layer = <4>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 };
@@ -58,6 +59,13 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&kp LALT>, <&kp LGUI>, <&kp LG(LALT)>;
+                };
+
+                tdm: tap_dance_mac {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp LALT>, <&kp LCTRL>, <&kp LC(LALT)>;
                 };
 
                 tdcaps: tap_dance_shift_caps {
@@ -128,6 +136,16 @@
                                    &tdw      MO_TOG(NUM)  &kp SPACE        &blt      MO_TOG(SYM)  &sk RALT
                         >;
                 };
+
+                mac_layer {
+                         bindings = <
+                         
+   &trans    &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
+   &kp LGUI  &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
+                                 &tdm      &trans    &trans        &trans    &trans    &trans
+                        >;
+                };
                 
                 graphite_layer {
                          bindings = <
@@ -162,9 +180,9 @@
                 control_layer {
                         bindings = <
 
-   &none      &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt         &bt BT_CLR  &none     &none       &vbup     &none       &to GRA
+   &to MAC    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt         &bt BT_CLR  &none     &none       &vbup     &none       &to GRA
    &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none         &soft_off   &none     &kp C_PREV  &kp C_PP  &kp C_NEXT  &to 0
-   &trans     &none         &none     CTRL(X)        CTRL(C)     CTRL(V)       &none       &none     &none       &vbdn     &none       &mt RSFT RET
+   &trans     &none         &none     CTRL(X)        CTRL(C)     CTRL(V)       &none       &none     &none       &vbdn     &CTRL(Z)    &mt RSFT RET
                                       &trans         &trans      &trans        &trans      &trans    &trans
                         >;
                 };
