@@ -23,7 +23,7 @@
 
 
 
-//=========================//=========================/ Version: 6.2 /=========================//=========================//
+//=========================//=========================/ Version: 6.3 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -139,7 +139,7 @@
    &kp TAB    &kp F20   &kp L     &kp D    &kp W        &ht_tp COMMA DOT     &kp FSLH  &kp F         AA(O)     AA(U)    &kp SEMI  &kp ESC
    &tdcaps    &kp N     &kp R     &kp T    AA(S)        AA(G)                &kp Y     &kp H         AA(A)     &kp E    AA(I)     &tdq
    &kp LGUI   &kp Q     &kp X     &kp M    AA(C)        &kp V                &kp K     &kp P         &kp B     &kp J    &kp Z     &mt RSFT RET
-                                  &tdm     MO_TOG(NUM)  &kp SPACE            &blt      &MO_TOG(SYM)  &sk RALT
+                                  &tdm     MO_TOG(NUM)  &kp SPACE            &blt      MO_TOG(SYM)   &sk RALT
                         >;
                 };
 
