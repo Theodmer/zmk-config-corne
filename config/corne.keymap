@@ -11,11 +11,11 @@
 
 #define GRA 0
 #define WIN 1
-#define NUM 2
-#define SYM 3
-#define CONTROL 4
-#define CONTROLW 5
-#define QWERTY 6
+#define QWERTY 2
+#define NUM 3
+#define SYM 4
+#define CONTROL 5
+#define CONTROLW 6
 
 #define MO_TOG(layer) &mo_tog layer layer
 #define AA(keycode) &ht_tp RA(keycode) keycode
@@ -23,19 +23,19 @@
 
 
 
-//=========================//=========================/ Version: 6.3 /=========================//=========================//
+//=========================//=========================/ Version: 6.5 /=========================//=========================//
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         control_layer {
-            if-layers = <2 3>;
-            then-layer = <4>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
         
         control_layer_w {
-            if-layers = <1 4>;
-            then-layer = <5>;
+            if-layers = <1 5>;
+            then-layer = <6>;
         };
     };
 };
