@@ -22,7 +22,7 @@
 #define CTRL(keycode) &ht_tp LG(keycode) LC(keycode)
 
 
-//=========================//=========================/ Version: 6.6 /=========================//=========================//
+//=========================//=========================/ Version: 6.7 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -64,13 +64,6 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <250>;
                         bindings = <&kp LALT>, <&kp LGUI>, <&kp LG(LALT)>;
-                };
-
-                tdm: tap_dance_mac {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <250>;
-                        bindings = <&kp LALT>, <&kp LCTRL>, <&kp LC(LALT)>;
                 };
 
                 tdcaps: tap_dance_shift_caps {
@@ -135,10 +128,10 @@
                 graphite_layer {
                          bindings = <
                          
-   &kp TAB    &kp F20   &kp L     &kp D    &kp W        &ht_tp COMMA DOT     &kp FSLH  &kp F         AA(O)     AA(U)    &kp SEMI  &kp ESC
-   &tdcaps    &kp N     &kp R     &kp T    AA(S)        AA(G)                &kp Y     &kp H         AA(A)     &kp E    AA(I)     &tdq
-   &kp LGUI   &kp Q     &kp X     &kp M    AA(C)        &kp V                &kp K     &kp P         &kp B     &kp J    &kp Z     &mt RSFT RET
-                                  &tdm     MO_TOG(NUM)  &kp SPACE            &blt      MO_TOG(SYM)   &sk RALT
+   &kp TAB    &kp F20   &kp L     &kp D     &kp W        &ht_tp COMMA DOT     &kp FSLH  &kp F         AA(O)     AA(U)    &kp SEMI  &kp ESC
+   &tdcaps    &kp N     &kp R     &kp T     AA(S)        AA(G)                &kp Y     &kp H         AA(A)     &kp E    AA(I)     &tdq
+   &kp LGUI   &kp Q     &kp X     &kp M     AA(C)        &kp V                &kp K     &kp P         &kp B     &kp J    &kp Z     &mt RSFT RET
+                                  &kp LALT  MO_TOG(NUM)  &kp SPACE            &blt      MO_TOG(SYM)   &kp LCTRL
                         >;
                 };
 
@@ -148,7 +141,7 @@
    &trans     &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
    &trans     &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
    &kp LCTRL  &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
-                                  &tdw      &trans    &trans        &trans    &trans    &trans
+                                  &tdw      &trans    &trans        &trans    &trans    &sk RAL
                         >;
                 };
 
