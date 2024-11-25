@@ -22,7 +22,7 @@
 #define CTRL(keycode) &ht_tp LG(keycode) LC(keycode)
 
 
-//=========================//=========================/ Version: 6.7 /=========================//=========================//
+//=========================//=========================/ Version: 6.8 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -141,7 +141,7 @@
    &trans     &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
    &trans     &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
    &kp LCTRL  &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
-                                  &tdw      &trans    &trans        &trans    &trans    &sk RAL
+                                  &tdw      &trans    &trans        &trans    &trans    &sk RALT
                         >;
                 };
 
