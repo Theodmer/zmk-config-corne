@@ -22,7 +22,7 @@
 #define CTRL(keycode) &ht_tp LG(keycode) LC(keycode)
 
 
-//=========================//=========================/ Version: 6.9 /=========================//=========================//
+//=========================//=========================/ Version: 6.10 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -110,14 +110,14 @@
                 vbup: vol_brghtnss_up {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp C_VOL_UP>, <&kp C_BRI_UP>;
+                        bindings = <&kp C_VOL_UP>, <&kp C_BRI_INC>;
                         mods = <(MOD_LALT)>;
                 };
                 
                 vbdn: vol_brghtnss_down {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp C_VOL_DN>, <&kp C_BRI_DN>;
+                        bindings = <&kp C_VOL_DN>, <&kp C_BRI_DEC>;
                         mods = <(MOD_LALT)>;
                 };
         };
