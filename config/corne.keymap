@@ -22,7 +22,7 @@
 #define CTRL(keycode) &ht_tp LG(keycode) LC(keycode)
 
 
-//=========================//=========================/ Version: 6.8 /=========================//=========================//
+//=========================//=========================/ Version: 6.9 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -111,14 +111,14 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp C_VOL_UP>, <&kp C_BRI_UP>;
-                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                        mods = <(MOD_LALT)>;
                 };
                 
                 vbdn: vol_brghtnss_down {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp C_VOL_DN>, <&kp C_BRI_DN>;
-                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                        mods = <(MOD_LALT)>;
                 };
         };
 
@@ -178,9 +178,9 @@
                 control_layer {
                         bindings = <
 
-   &to WIN    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt          &bt BT_CLR  &none     &none       &kp C_BRI_INC &none       &to GRA
-   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none          &soft_off   &none     &kp C_PREV  &kp C_PP   &kp C_NEXT  &to QWERTY
-   &kp LALT   &none         &none     &kp LG(X)      &kp LG(C)   &kp LG(V)      &none       &none     &none       &vbdn      &kp LG(Z)   &mt RSFT RET
+   &to WIN    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt          &bt BT_CLR  &none     &none       &vbup     &none       &to GRA
+   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none          &soft_off   &none     &kp C_PREV  &kp C_PP  &kp C_NEXT  &to QWERTY
+   &kp LALT   &none         &none     &kp LG(X)      &kp LG(C)   &kp LG(V)      &none       &none     &none       &vbdn     &kp LG(Z)   &mt RSFT RET
                                       &kp LGUI       &none       &trans         &trans      &none     &trans
                         >;
                 };
