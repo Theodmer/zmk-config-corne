@@ -178,9 +178,9 @@
                 control_layer {
                         bindings = <
 
-   &to WIN    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt          &bt BT_CLR  &none     &none       &vbup     &none       &to GRA
-   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none          &soft_off   &none     &kp C_PREV  &kp C_PP  &kp C_NEXT  &to QWERTY
-   &kp LALT   &none         &none     &kp LG(X)      &kp LG(C)   &kp LG(V)      &none       &none     &none       &vbdn     &kp LG(Z)   &mt RSFT RET
+   &to WIN    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt          &bt BT_CLR  &none     &none       &C_BRI_INC &none       &to GRA
+   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none          &soft_off   &none     &kp C_PREV  &kp C_PP   &kp C_NEXT  &to QWERTY
+   &kp LALT   &none         &none     &kp LG(X)      &kp LG(C)   &kp LG(V)      &none       &none     &none       &vbdn      &kp LG(Z)   &mt RSFT RET
                                       &kp LGUI       &none       &trans         &trans      &none     &trans
                         >;
                 };
