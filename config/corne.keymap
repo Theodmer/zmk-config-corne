@@ -22,7 +22,7 @@
 #define CTRL(keycode) &ht_tp LG(keycode) LC(keycode)
 
 
-//=========================//=========================/ Version: 6.10 /=========================//=========================//
+//=========================//=========================/ Version: 6.11 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -106,20 +106,6 @@
                         bindings = <&kp BSPC>, <&kp DEL>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
-
-                vbup: vol_brghtnss_up {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp C_VOL_UP>, <&kp C_BRI_INC>;
-                        mods = <(MOD_LALT)>;
-                };
-                
-                vbdn: vol_brghtnss_down {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp C_VOL_DN>, <&kp C_BRI_DEC>;
-                        mods = <(MOD_LALT)>;
-                };
         };
 
         keymap {
@@ -178,9 +164,9 @@
                 control_layer {
                         bindings = <
 
-   &to WIN    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt          &bt BT_CLR  &none     &none       &vbup     &none       &to GRA
-   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none          &soft_off   &none     &kp C_PREV  &kp C_PP  &kp C_NEXT  &to QWERTY
-   &kp LALT   &none         &none     &kp LG(X)      &kp LG(C)   &kp LG(V)      &none       &none     &none       &vbdn     &kp LG(Z)   &mt RSFT RET
+   &to WIN    &kp LC(LEFT)  &kp UP    &kp LC(RIGHT)  &none       &tdbt          &bt BT_CLR  &none     &kp C_BRI_DEC  &kp C_VOL_DN  &kp C_BRI_INC  &to GRA
+   &kp LSHFT  &kp LEFT      &kp DOWN  &kp RIGHT      &none       &none          &soft_off   &none     &kp C_PREV     &kp C_PP      &kp C_NEXT     &to QWERTY
+   &kp LALT   &none         &none     &kp LG(X)      &kp LG(C)   &kp LG(V)      &none       &none     &none          &kp C_VOL_UP  &kp LG(Z)      &mt RSFT RET
                                       &kp LGUI       &none       &trans         &trans      &none     &trans
                         >;
                 };
