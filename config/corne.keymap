@@ -22,7 +22,7 @@
 #define CTRL(keycode) &ht_tp LG(keycode) LC(keycode)
 
 
-//=========================//=========================/ Version: 7.1 /=========================//=========================//
+//=========================//=========================/ Version: 7.2 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -124,9 +124,9 @@
                 windows_layer {
                          bindings = <
                          
-   &trans     &trans    &trans    &trans    &trans    &trans        &trans      &trans    &trans    &trans    &trans       &trans
-   &trans     &trans    &trans    &trans    &trans    &trans        &trans      &trans    &trans    &trans    &mt LCTRL I  &trans
-   &kp LCTRL  &trans    &trans    &trans    &trans    &trans        &trans      &trans    &trans    &trans    &trans       &trans
+   &trans     &trans    &trans    &trans    &trans    &trans        &trans      &trans    &trans      &trans       &trans    &trans
+   &trans     &trans    &trans    &trans    &trans    &trans        &trans      &trans    &mt RALT A  &mt LCTRL E  &trans    &trans
+   &kp LCTRL  &trans    &trans    &trans    &trans    &trans        &trans      &trans    &trans      &trans       &trans    &trans
                                   &tdw      &trans    &trans        &trans      &trans    &sk RALT
                         >;
                 };
