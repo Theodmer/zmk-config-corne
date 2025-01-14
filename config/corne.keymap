@@ -22,7 +22,7 @@
 #define CTRL(keycode) &ht_tp LG(keycode) LC(keycode)
 
 
-//=========================//=========================/ Version: 6.12 /=========================//=========================//
+//=========================//=========================/ Version: 7.0 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -114,20 +114,20 @@
                 graphite_layer {
                          bindings = <
                          
-   &kp TAB    &kp F20   &kp L     &kp D     &kp W        &ht_tp COMMA DOT     &kp FSLH  &kp F         AA(O)     AA(U)    &kp SEMI  &kp ESC
-   &tdcaps    &kp N     &kp R     &kp T     AA(S)        AA(G)                &kp Y     &kp H         AA(A)     &kp E    AA(I)     &tdq
-   &kp LGUI   &kp Q     &kp X     &kp M     AA(C)        &kp V                &kp K     &kp P         &kp B     &kp J    &kp Z     &mt RSFT RET
-                                  &kp LALT  MO_TOG(NUM)  &kp SPACE            &blt      MO_TOG(SYM)   &kp LCTRL
+   &kp TAB    &kp F20      &kp L        &kp D       &kp W        &ht_tp COMMA DOT     &kp FSLH  &kp F         AA(O)       AA(U)       &kp SEMI    &kp ESC
+   &tdcaps    &mt LSHFT N  &mt LGUI R  &mt LCTRL T  &mt LALT S   AA(G)                &kp Y     &mt LALT H    &mt RALT A  &mt RGUI E  &mt RSFT I  &tdq
+   &kp LGUI   &kp Q        &kp X        &kp M       AA(C)        &kp V                &kp K     &kp P         &kp B       &kp J       &kp Z       &mt RSFT RET
+                                        &kp LALT    MO_TOG(NUM)  &kp SPACE            &blt      MO_TOG(SYM)   &kp LCTRL
                         >;
                 };
 
                 windows_layer {
                          bindings = <
                          
-   &trans     &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
-   &trans     &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
-   &kp LCTRL  &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans    &trans
-                                  &tdw      &trans    &trans        &trans    &trans    &sk RALT
+   &trans     &trans       &trans       &trans      &trans      &trans        &trans      &trans      &trans      &trans       &trans      &trans
+   &trans     &mt LSHFT N  &mt LCTRL R  &mt LGUI T  &mt LALT S  &trans        &trans      &mt LALT H  &mt RALT A  &mt RCTRL E  &mt RSFT I  &trans
+   &kp LCTRL  &trans       &trans       &trans      &trans      &trans        &trans      &trans      &trans      &trans       &trans      &trans
+                                        &tdw        &trans      &trans        &trans      &trans      &sk RALT
                         >;
                 };
 
