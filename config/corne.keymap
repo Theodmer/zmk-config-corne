@@ -22,7 +22,7 @@
 #define CTRL(keycode) &ht_tp LG(keycode) LC(keycode)
 
 
-//=========================//=========================/ Version: 7.2 /=========================//=========================//
+//=========================//=========================/ Version: 7.3 /=========================//=========================//
 
 / {
     conditional_layers {
@@ -104,7 +104,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp BSPC>, <&kp DEL>;
-                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                        mods = <(MOD_LALT|MOD_RALT)>;
                 };
         };
 
